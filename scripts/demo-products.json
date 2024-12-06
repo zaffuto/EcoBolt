@@ -1,0 +1,54 @@
+[
+  {
+    "title": "SmartBot Premium",
+    "handle": "smartbot-premium",
+    "description": "Acceso premium a nuestra plataforma de chat inteligente con funciones avanzadas.",
+    "price": 29990,
+    "compareAtPrice": 39990,
+    "images": [
+      "https://smarterbot.cl/images/premium-plan.png"
+    ],
+    "variants": [
+      {
+        "title": "Plan Mensual",
+        "price": 29990,
+        "compareAtPrice": 39990,
+        "inventoryQuantity": 999
+      }
+    ],
+    "tags": [
+      "Featured",
+      "Premium",
+      "AI"
+    ],
+    "vendor": "SmarterBot",
+    "productType": "Subscription",
+    "status": "active"
+  },
+  {
+    "title": "SmartBot Enterprise",
+    "handle": "smartbot-enterprise",
+    "description": "Solución empresarial personalizada con soporte dedicado y características exclusivas.",
+    "price": 99990,
+    "compareAtPrice": 149990,
+    "images": [
+      "https://smarterbot.cl/images/enterprise-plan.png"
+    ],
+    "variants": [
+      {
+        "title": "Plan Anual",
+        "price": 99990,
+        "compareAtPrice": 149990,
+        "inventoryQuantity": 100
+      }
+    ],
+    "tags": [
+      "Featured",
+      "Enterprise",
+      "AI"
+    ],
+    "vendor": "SmarterBot",
+    "productType": "Enterprise",
+    "status": "active"
+  }
+]
