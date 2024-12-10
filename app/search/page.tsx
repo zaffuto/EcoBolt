@@ -11,17 +11,18 @@ export const metadata = {
   description: 'Descubre cómo Eco Bolt puede ayudarte a cumplir con la Ley REP mediante servicios de logística sostenible y tecnologías avanzadas.'
 };
 
-export default async function SearchPage(props: {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+export default async function SearchPage({
+  searchParams
+}: {
+  searchParams?: { [key: string]: string | string[] | undefined }
 }) {
-  const searchParams = await props.searchParams;
-  const { sort, q: searchValue } = searchParams as { [key: string]: string };
+  const { sort, q: searchValue } = searchParams || {};
   const { sortKey, reverse } = sorting.find((item) => item.slug === sort) || { sortKey: defaultSort, reverse: false };
-  const products = await getProducts({ sortKey, reverse, query: searchValue });
+  const products = await getProducts({ sortKey, reverse, query: searchValue as string });
 
   return (
     <div>
-      <SearchClient products={products} searchValue={searchValue} />
+      <SearchClient products={products} searchValue={searchValue as string} />
     </div>
   );
 }
