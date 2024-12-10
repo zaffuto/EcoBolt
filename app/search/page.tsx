@@ -1,11 +1,8 @@
-'use client'; // <-- Directiva "use client" al principio del archivo
-
-import { useState } from 'react';
 import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { defaultSort, sorting } from 'lib/constants';
 import { getProducts } from 'lib/shopify';
-import QRCode from 'qrcode';
+import SearchClient from './client'; // Importar el componente del cliente
 
 // Metadatos de la página
 export const metadata = {
@@ -17,22 +14,11 @@ export const metadata = {
 // Configuración del tiempo de ejecución
 export const runtime = 'nodejs';
 
-// Componente principal
+// Componente principal (servidor)
 export default async function SearchPage(props: {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+  searchParams?: { [key: string]: string | string[] | undefined };
 }) {
-  const [qrCodeUrl, setQrCodeUrl] = useState('');
-
-  // Función para generar el código QR
-  const generateQRCode = async (discount: string, phone: string) => {
-    const qrData = `Descuento: ${discount}, Contacto: ${phone}`;
-    const url = await QRCode.toDataURL(qrData);
-    setQrCodeUrl(url);
-  };
-
-  // Obtener parámetros de búsqueda
-  const searchParams = await props.searchParams;
-  const { sort, q: searchValue } = (searchParams as { [key: string]: string }) || {};
+  const { sort, q: searchValue } = props.searchParams || {};
   const { sortKey, reverse } = sorting.find((item) => item.slug === sort) || defaultSort;
 
   // Obtener productos
@@ -74,20 +60,7 @@ export default async function SearchPage(props: {
           Si ya tienes una tienda Shopify, sigue las instrucciones para instalar nuestra APP y empezar a usar Eco Bolt.
           Si no tienes una tienda, crea una nueva con nuestro descuento exclusivo.
         </p>
-        <div className="mb-4">
-          <button
-            className="bg-green-500 text-white px-4 py-2 rounded"
-            onClick={() => generateQRCode('20% Descuento', '+56912345678')}
-          >
-            Generar QR para descuento
-          </button>
-          {qrCodeUrl && (
-            <div className="mt-4">
-              <img src={qrCodeUrl} alt="Código QR de descuento" className="mb-4" />
-              <p className="text-lg">Envíalo a tu celular para compartirlo por WhatsApp.</p>
-            </div>
-          )}
-        </div>
+        <SearchClient /> {/* Renderizar el componente del cliente */}
       </div>
 
       {/* Sección de resultados de búsqueda */}
