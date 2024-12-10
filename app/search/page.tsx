@@ -1,5 +1,3 @@
-'use client';
-
 import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { defaultSort, sorting } from 'lib/constants';
@@ -7,14 +5,14 @@ import { getProducts } from 'lib/shopify';
 import QRCode from 'qrcode';
 import { useState } from 'react';
 
-export const runtime = 'nodejs';
-
-export const runtime = 'nodejs';
-
 export const metadata = {
   title: 'Eco Bolt - Solución para la Ley REP',
   description: 'Descubre cómo Eco Bolt puede ayudarte a cumplir con la Ley REP mediante servicios de logística sostenible y tecnologías avanzadas.'
 };
+
+export const runtime = 'nodejs';
+
+'use client';
 
 export default async function SearchPage(props: {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
