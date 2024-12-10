@@ -25,6 +25,14 @@ Eco Bolt es una aplicación de **Shopify** diseñada para enviar **Eco Descuento
 - **Cumplimiento legal**: Facilita el cumplimiento de la Ley REP en Chile, promoviendo la gestión adecuada de residuos.
 - **Comunicación directa**: El envío de descuentos por WhatsApp fortalece la relación con el cliente.
 
+## Solución Eco Bolt aplicada a la Ley REP
+
+Tu proyecto Eco Bolt puede convertirse en una herramienta clave para empresas obligadas a cumplir con la Ley REP, ofreciendo servicios de logística sostenible para recolectar y trasladar productos prioritarios hacia centros de reciclaje o valorización.
+
+- **Gerente Ai (Bolt)**: Configurar el modelo LLM para tomar decisiones optimizadas en la gestión de residuos en zonas urbanas, maximizando la eficiencia y minimizando la huella de carbono.
+- **Automatización y trazabilidad**: Usar la granja Ai para integrar APIs públicas chilenas y sistemas de reciclaje que permitan a las empresas cumplir con sus metas REP mediante reportes automatizados.
+- **Eco Cupon**: Usarlo como incentivo para los consumidores finales, promoviendo que entreguen productos prioritarios (baterías, neumáticos, electrónicos) a puntos de acopio o reciclaje asociados.
+
 ## Instalación
 
 1. **Añadir Eco Bolt a Shopify**: Dirígete a la tienda de aplicaciones de Shopify y busca **Eco Bolt**.
