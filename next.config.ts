@@ -1,4 +1,5 @@
-export default {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -8,5 +9,17 @@ export default {
         pathname: '/s/files/**'
       }
     ]
-  }
+  },
+  serverExternalPackages: ['@shopify/shopify-api'],
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '2mb'
+    }
+  },
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  output: 'standalone'
 };
+
+export default nextConfig;
