@@ -9,6 +9,8 @@ import { useState } from 'react';
 
 export const runtime = 'nodejs';
 
+export const runtime = 'nodejs';
+
 export const metadata = {
   title: 'Eco Bolt - Solución para la Ley REP',
   description: 'Descubre cómo Eco Bolt puede ayudarte a cumplir con la Ley REP mediante servicios de logística sostenible y tecnologías avanzadas.'

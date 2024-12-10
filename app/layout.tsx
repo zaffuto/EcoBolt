@@ -1,4 +1,5 @@
 import { CartProvider } from 'components/cart/cart-context';
+import { ErrorBoundary } from 'components/error-boundary'; // Added import statement for ErrorBoundary
 import { Navbar } from 'components/layout/navbar';
 import { WelcomeToast } from 'components/welcome-toast';
 import { GeistSans } from 'geist/font/sans';
@@ -7,7 +8,6 @@ import { ensureStartsWith } from 'lib/utils';
 import { cookies } from 'next/headers';
 import { ReactNode } from 'react';
 import { Toaster } from 'sonner';
-import { ErrorBoundary } from 'components/error-boundary'; // Added import statement for ErrorBoundary
 import './globals.css';
 
 const { TWITTER_CREATOR, TWITTER_SITE, SITE_NAME } = process.env;
